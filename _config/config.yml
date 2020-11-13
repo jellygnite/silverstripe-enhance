@@ -1,0 +1,31 @@
+---
+Name: jellygnite-enhance
+---
+Page:
+  extensions:
+    - Jellygnite\Enhance\Extensions\PageExtension
+SilverStripe\Assets\File:
+  allowed_extensions:
+    - svg
+    - webp
+  app_categories:
+    image/unsupported:
+      - svg
+    image/supported:
+      - webp
+  extensions:
+    - Jellygnite\Enhance\Extensions\FileExtension
+SilverStripe\Assets\Storage\DBFile:
+  supported_images:
+    - image/webp
+SilverStripe\Assets\Image:
+  allowed_extensions:
+    - webp
+  extensions:
+    - Jellygnite\Enhance\Extensions\ImageExtension
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - Jellygnite\Enhance\Extensions\SiteConfigExtension
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Jellygnite\Enhance\Extensions\CMSExtension

@@ -1,0 +1,9 @@
+
+.form__field-description { font-size: 11px }
+.notice-wrap { top: 60px }
+
+.fieldgroup-horizontal .form__fieldgroup-label { display: inline-block; }
+.fieldgroup-horizontal .field input.text { display: inline-block; width:auto }
+.form__fieldgroup.fieldgroup-horizontal > .form__fieldgroup-item { margin-top: 0}
+
+td[class$="CMSThumbnail"] img { max-width:100px }

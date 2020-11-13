@@ -1,0 +1,30 @@
+{
+    "name": "jellygnite/silverstripe-enhance",
+    "description": "Various improvements to a SilverStripe installation.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/framework": "^4.0",
+        "silverstripe/admin": "^1.0",
+        "dnadesign/silverstripe-elemental": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jellygnite\\Enhance\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client/dist"
+        ],
+        "branch-alias": {
+            "dev-master": "4.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
