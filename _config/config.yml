@@ -15,6 +15,11 @@ SilverStripe\Assets\File:
       - webp
   extensions:
     - Jellygnite\Enhance\Extensions\FileExtension
+SilverStripe\MimeValidator\MimeUploadValidator:
+  MimeTypes:
+    svg:
+      - 'image/svg+xml'
+      - 'image/svg'
 SilverStripe\Assets\Storage\DBFile:
   supported_images:
     - image/webp
