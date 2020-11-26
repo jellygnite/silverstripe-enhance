@@ -5,6 +5,7 @@ namespace Jellygnite\Enhance\Extensions;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
 use SilverStripe\Assets\Image;
@@ -18,6 +19,7 @@ class SiteConfigExtension extends DataExtension
 
     private static $db = [
 		"AdministratorEmail" => "Varchar(254)",
+		"ContactResponse" => "HTMLText",
 		"Phone" => "Varchar(50)",
 		"Fax" => "Varchar(50)",
 		"Email" => "Varchar(254)",
@@ -61,7 +63,10 @@ class SiteConfigExtension extends DataExtension
 
 		$fields->addFieldsToTab("Root.ContactDetails", array(
 			TextField::create("AdministratorEmail", "Email to receive Submissions")
-				->setRightTitle("All form submissions will be sent to this email address.")
+				->setRightTitle("All form submissions will be sent to this email address."),
+			HTMLEditorField::create("ContactResponse", "Contact Response")
+				->setRightTitle("Message to display after submitting contact form.")
+				->setRows(5)
 		));
 
 	    $fields->addFieldsToTab("Root.ContactDetails", array(
