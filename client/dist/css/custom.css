@@ -8,5 +8,5 @@
 
 td[class$="CMSThumbnail"] img { max-width:100px }
 
-
-.element-editor__element--modified { background: rgba(51,204,102,0.1) }
+.element-editor__element--draft,
+.element-editor__element--modified { background: #fff2ea; }
