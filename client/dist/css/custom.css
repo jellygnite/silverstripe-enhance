@@ -7,3 +7,6 @@
 .form__fieldgroup.fieldgroup-horizontal > .form__fieldgroup-item { margin-top: 0}
 
 td[class$="CMSThumbnail"] img { max-width:100px }
+
+
+.element-editor__element--modified { background: rgba(51,204,102,0.1) }
