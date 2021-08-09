@@ -10,3 +10,6 @@ td[class$="CMSThumbnail"] img { max-width:100px }
 
 .element-editor__element--draft,
 .element-editor__element--modified { background: #fff2ea; }
+
+
+.popover-option-set > .popover { min-width: 380px }

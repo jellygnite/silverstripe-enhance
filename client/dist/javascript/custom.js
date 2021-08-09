@@ -1,5 +1,11 @@
 (function($) {
 	$.entwine('ss', function($) {
+		$(".mce-edit-area iframe").entwine({
+			onmatch: function() {
+				$(this).attr("title","");
+				$(function() { $( '[title]' ).tooltip({ content: function() { return $(this).attr('title'); } }); });
+			}
+		}),
 		// can't see why onclick is not firing
 		$(".grid-field .gridfield-button-duplicate").entwine({
 			onmatch: function() {

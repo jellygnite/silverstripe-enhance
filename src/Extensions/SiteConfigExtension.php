@@ -141,9 +141,9 @@ class SiteConfigExtension extends DataExtension
 		
 		if( ((float) $siteconfig->Latitude) && ( (float) $siteconfig->Longitude ) ) {
 			$query = rawurlencode ($siteconfig->Latitude . ',' . $siteconfig->Longitude);
-		} elseif($siteconfig->Address) {
+		} elseif($siteconfig->MapAddress) {
 			//$query = str_replace(",", "", preg_replace("!\s+!", " ", preg_replace( "/\r|\n/", " ", strip_tags ($siteconfig->Postal))));
-			$query = rawurlencode (str_replace(",", "", preg_replace("!\s+!", " ", preg_replace( "/\r|\n/", " ", strip_tags ($siteconfig->Address)))));
+			$query = rawurlencode (str_replace(",", "", preg_replace("!\s+!", " ", preg_replace( "/\r|\n/", " ", strip_tags ($siteconfig->MapAddress)))));
 			
 	
     	}
