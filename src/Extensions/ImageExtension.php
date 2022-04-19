@@ -15,22 +15,25 @@ use SilverStripe\Dev\Debug;
 
 class ImageExtension extends DataExtension {
 
+	// luminance value for image to be considered light or dark
+    private static $luminance = 55;
 
     private static $db = [
         'Luminance' => 'Int'
     ];
 	
 	public function IsDark() {
-		if($this->owner->Luminance > 0 && $this->owner->Luminance <= 55){
+		 $luminance = $this->getOwner()->config()->get('luminance');		
+		if($this->owner->Luminance > 0 && $this->owner->Luminance <= $luminance){
 			return true;
 		}
 		return false;
 	}
 	public function IsLight() {
-		if($this->owner->Luminance > 0 && $this->owner->Luminance > 55){
+		 $luminance = $this->getOwner()->config()->get('luminance');
+		if($this->owner->Luminance > 0 && $this->owner->Luminance > $luminance){
 			return true;
 		}
-		
 		return false;
 	}
 	
