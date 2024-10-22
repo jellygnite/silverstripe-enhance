@@ -46,10 +46,10 @@ class PageExtension extends DataExtension {
         $enable_summary = $this->owner->config()->get('enable_summary');
 		if($enable_summary){
 			$fields->insertBefore(
+				'Content',
 				TextAreaField::create("Summary", "Summary")
 					->setRightTitle('If no summary is specified the first 50 words will be used from the Content field.')
-					->setRows(3), 
-				'Content'
+					->setRows(3)
 			);      
 		}
 		
