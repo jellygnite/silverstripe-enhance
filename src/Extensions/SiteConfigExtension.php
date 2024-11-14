@@ -129,8 +129,8 @@ class SiteConfigExtension extends DataExtension
 	}
 
 	public function PhoneLink(){
-		$phone = preg_replace('/[^\d\+]/', '', $this->owner->Phone);
-		return 	$phone;
+		$phone = preg_replace('/[^\d\+]/', '', $this->owner->Phone ?? '');
+		return $phone;
 	}
 	
 
